@@ -1,4 +1,4 @@
-# Project Name
+# Slice Restaurant
 
 A C# project developed with Entity Framework, featuring a REST API, two views, and an admin interface.
 
