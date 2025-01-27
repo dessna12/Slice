@@ -1,0 +1,19 @@
+﻿@page
+@model pizza_restaurant.Pages.Admin.IndexModel
+@{
+}
+
+<h1> Vous devez vous authentifier</h1>
+<br />
+
+@if (!Model.isAccountValid)
+{
+	<p style="color: red;">Erreur : Le compte est invalide</p>
+}
+
+<form method="post">
+	<input type="text" name="username" placeholder="Login"> <br /><br />
+
+	<input type="password" name="password" placeholder="Mot de passe">
+	<button>Se connecter</button>
+</form>

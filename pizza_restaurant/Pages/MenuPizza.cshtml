@@ -1,0 +1,48 @@
+﻿@page
+@using pizza_restaurant.Models
+@model pizza_restaurant.Pages.MenuPizzaModel
+@{
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+		<link href="~/css/styles.css" rel="stylesheet" />
+		<title>Menu des Pizzas</title>
+	</head>
+	<body id="menu">
+		<div class="text-center">
+			<div class="logo-container">
+			<a asp-page="/Index"><img src="/images/slice-logo-white.png" alt="Logo Slice" class="logo" /></a>
+			</div>
+			
+			<div class="container-centered"> 
+				<h1 class="display-4">Nos Pizzas</h1>
+
+			<div class="pizza-grid">
+				@foreach (var pizza in Model.Pizza)
+				{
+					<div class="pizza-item">
+						<div class="pizza-info">
+							<div class="pizza-name-badge">
+							<span class="pizza-name">@pizza.nom</span>
+							@if (@pizza.vegetarienne)
+							{
+								<span class="vegetarian-badge">Veg</span>
+							}
+							</div>
+
+							<span class="pizza-price">@String.Format("{0:0.00}",pizza.prix) €</span>
+						</div>
+						<p class="pizza-ingredients">@pizza.ingredients</p>
+					</div>
+				}
+			</div>
+
+			</div>
+		</div>
+	</body>
+</html>
+
+
+

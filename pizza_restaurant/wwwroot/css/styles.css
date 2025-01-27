@@ -1,0 +1,129 @@
+﻿body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+li {
+    color: blue;
+}
+
+#hero {
+    background: url("/images/hero-pizza-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#menu {
+    background: url("/images/pizza-background.webp") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logo-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 500px;
+    width: 100%;
+    height: auto;  Maintain aspect ratio 
+}
+
+.container-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit;
+    width: 100%; /* Full width of the viewport */
+    text-align: center; /* Center text alignment if needed */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700; /* Bold font */
+    color: #d8390d; /* Eye-catching color */
+    text-transform: uppercase; /* All caps for a bold statement */
+    letter-spacing: 2px; /* Add spacing between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    margin: 20px 0; /* Add spacing above and below */
+    position: relative;
+}
+
+    h1::after {
+        content: '';
+        position: absolute;
+        bottom: -10px; /* Position underline below text */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%; /* Adjust underline width */
+        height: 4px; /* Thickness of underline */
+        background-color: #d8390d; /* Matches text color */
+        border-radius: 2px; /* Rounded underline edges */
+    }
+
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 15px; /* Reduced space between grid items */
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Keep the clean, modern font */
+}
+
+.pizza-item {
+    padding: 12px;
+    border: 1px solid #e0e0e0; /* Light border for separation */
+    border-radius: 8px; /* Slightly smaller rounded corners */
+    background-color: #fff; /* Background color for contrast */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 0.9rem; /* Smaller font size for the whole item */
+}
+
+.pizza-info {
+    display: flex;
+    justify-content: space-between; /* Align name and price to opposite ends */
+    align-items: center;
+    margin-top: 8px; /* Space between ingredients and the info */
+}
+
+.pizza-name {
+    font-size: 1.2rem; /* Smaller size for name */
+    font-weight: bold;
+    color: #333; /* Dark color for text */
+}
+.pizza-name-badge {
+    align-items: center;
+}
+
+.pizza-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e63946;
+}
+
+.pizza-ingredients {
+    font-size: 1rem;
+    color: #666; 
+    margin-bottom: 8px;
+    margin-top: 8px;
+    line-height: 1.2; 
+    text-align: start;
+}
+
+.vegetarian-badge {
+    background-color: #8bc34a; /* Green color for vegetarian badge */
+    color: #fff;
+    font-size: 0.8rem; /* Smaller font for badge */
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 15px; /* Rounded edges for badge */
+    margin-left: 10px; /* Space between name and badge */
+    text-transform: uppercase;
+}
