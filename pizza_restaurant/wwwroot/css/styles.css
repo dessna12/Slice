@@ -9,14 +9,88 @@ li {
 
 #hero {
     background: url("/images/hero-pizza-bg.jpg") no-repeat center center fixed;
+    background-blend-mode: overlay;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    z-index:0;
 }
 
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Opaque overlay */
+    z-index: -1; /* Ensure the overlay is above the image */
+}
+
+#hero .container-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#hero .logo-container {
+    margin-bottom: 10px;
+}
+
+
+#hero .logo {
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.motto{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#hero a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #d8390d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    #hero a:hover {
+        background-color: #b32a0a;
+    }
+
+    #hero a:focus {
+        outline: 2px solid #d8390d;
+    }
+
 #menu {
-    background: url("/images/pizza-background.webp") no-repeat center center fixed;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("/images/pizza-background.webp") no-repeat center center fixed;
+    background-blend-mode: overlay;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -33,7 +107,7 @@ li {
 .logo {
     max-width: 500px;
     width: 100%;
-    height: auto;  Maintain aspect ratio 
+    height: auto;
 }
 
 .container-centered {
